@@ -33,9 +33,9 @@ require('./routes/billingRoutes')(app);
 if(process.env.NODE_ENV === 'production'){
   app.use(express.static('../client/build'));
   const path = require('path');
+  console.log(path, "PATH");
   app.get('*', (req, res) => {
-    const index = path.join(__dirname, 'client', 'build', 'index.html');
-    res.sendFile(index);
+    res.sendFile(path.resolve('./client/build/index.html'));
   })
 }
 
