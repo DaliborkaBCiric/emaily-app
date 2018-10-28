@@ -6,13 +6,16 @@ module.exports = app => {
     })
   );
 
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  app.get('/auth/google/callback',
+    passport.authenticate('google'),
+    (req, res) => {
+      res.redirect("/");
+    }
+  );
 
   app.get('/api/logout', (req, res) => {
-    // brise cookie, i tako obrise sesiju korisnika
     req.logout();
-    // salje obavestenje da je user izlogovan
-    res.send(req.user);
+    res.redirect("/");
   });
 
   app.get('/api/current_user', (req, res) => {
