@@ -5,5 +5,7 @@ module.exports = {
     mongoURI: 'mongodb://daliborka:bukicica89@ds141783.mlab.com:41783/bukica-emaily-dev',
     cookieKey: 'slfsdlfjsdf;sdl;fksdlfksfdsjgihfgkfnvvskfs',
     stripePublishableKey: 'pk_test_s2vITVaS8wf0Ih1P6QMnmtxh',
-    stripeSecretKey: 'sk_test_gnBUR7LiR4wp8eg7Wb19P55I'
+    stripeSecretKey: 'sk_test_gnBUR7LiR4wp8eg7Wb19P55I',
+    sendGridKey: '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',
+    redirectDomain: 'http://localhost:3000'
 };
