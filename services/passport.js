@@ -5,9 +5,7 @@ const keys = require('../config/keys');
 
 const User = mongoose.model('users');
 
-// setovanje user id koji treba da ide u cookie
 passport.serializeUser((user, done) => {
-  // user.id je shortcut za "_id" iz mongodb
   done(null, user.id);
 });
 
